@@ -4,6 +4,20 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
+
+  // const handleDownload = () => {
+  //   const resumeUrl = "EthanCalaRE.docx";
+  //   const link = document.createElement("a");
+  //   link.href = resumeUrl;
+  //   link.download = "EthanCalaResume.docx";
+  //   document.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
+
+
+
+
   return (
     <section className="py-20 text-center">
       <motion.div
@@ -17,7 +31,12 @@ export default function Hero() {
           Passionate about creating innovative solutions and constantly learning new technologies. 
           Specializing in web development, machine learning, and software engineering.
         </p>
-        <Button size="lg">Download CV</Button>
+
+        <a href="/EthanCalaRE.docx" download="EthanCalaResume.docx"><Button variant="outline"  className="bg-white text-black border-2 border-black hover:text-black focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors">
+  Download CV
+</Button></a>
+       
+
       </motion.div>
     </section>
   )
