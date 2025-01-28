@@ -5,19 +5,6 @@ import { Button } from "@/components/ui/button"
 
 export default function Hero() {
 
-  // const handleDownload = () => {
-  //   const resumeUrl = "EthanCalaRE.docx";
-  //   const link = document.createElement("a");
-  //   link.href = resumeUrl;
-  //   link.download = "EthanCalaResume.docx";
-  //   document.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-  // };
-
-
-
-
   return (
     <section className="py-20 text-center">
       <motion.div
