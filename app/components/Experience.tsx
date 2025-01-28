@@ -6,22 +6,16 @@ import { Button } from "@/components/ui/button"
 
 const experiences = [
   {
-    title: "Getting Started with React Hooks",
-    description: "Learn how to use React Hooks to manage state and side effects in your functional components.",
-    date: "2023-05-15",
-    readMore: "/experience/react-hooks"
+    title: "IT intern | Sidley Austin LLP",
+    description: "QA machines and created documentation on software setup	Deployed and wrote PowerShell scripts to automate simplistic tasks	Wiped, protected, and migrated sensitive data Installed and configured operating systems through server Completed tickets for user support",
+    date: "2024-02-27 to Present" ,
+    website: "https://www.sidley.com/en/us/"
   },
   {
-    title: "Introduction to Machine Learning with Python",
-    description: "Explore the basics of machine learning and implement your first ML model using Python and scikit-learn.",
-    date: "2023-06-02",
-    readMore: "/experience/intro-ml-python"
-  },
-  {
-    title: "Building RESTful APIs with Node.js and Express",
-    description: "A comprehensive guide to creating robust and scalable RESTful APIs using Node.js and Express.",
-    date: "2023-06-20",
-    readMore: "/experience/nodejs-express-api"
+    title: "Web Applications Engineer | BCAMP",
+    description: "Modeled, documented, presented, built, and deployed full stack web application with small team of developers	Created frontend using typescript react, tied fastAPI to frontendIntegrated wallet API into project Developed complex algorithm to compute user’s wallet/asset efficiency using python Built CI/CD pipeline through Vercel",                                                                                                       
+    date: "2024-05-29 to 2024-08-03",
+    website: "https://bcamp.dev/"
   }
 ]
 
@@ -47,7 +41,7 @@ export default function Experience() {
               </CardContent>
               <CardFooter>
                 <Button asChild>
-                  <a href={post.readMore}>Read More</a>
+                  <a href={post.website}>Employer Website</a>
                 </Button>
               </CardFooter>
             </Card>
