@@ -9,27 +9,26 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 const projects = [
   {
     title: "Mode Score",
-    description: "A full-stack DeFi solution built and Deployed during my time at BCAMP",
+    description: "A full-stack DeFi solution built and deployed during my time at BCAMP.",
     details: "Mode Score is a dApp that evaluates and optimizes your digital assets across multiple ecosystems with a capital efficiency score, and a user-friendly interface. It integrates wallets, recommends opportunities, and is especially helpful for newcomers to DeFi.",
-    technologies: ["React", "Next.js", "Vercel", "TypeScript", "Python", "fastAPI"],
+    technologies: ["React", "Next.js", "Vercel", "TypeScript", "Python", "fastAPI", "Tailwind CSS"],
     github: "https://github.com/0xBcamp/mode-score-frontend",
     demo: "https://mode-score-app.vercel.app/"
   },
   {
-    title: "Portfolio Webstie",
-    description: "Your currently looking at it!",
-    details: "A collection of my professional work, including projects, achievements, and skills.",
-    technologies: ["Next.js", "React", "Toast ", "Framer", "Tailwind"],
+    title: "Portfolio Website",
+    description: "You're currently looking at it!",
+    details: "A collection of my professional work, including projects, work experience, and skills.",
+    technologies: ["Next.js", "React", "Toast", "Vercel", "Tailwind CSS"],
     github: "https://github.com/ethancala/PersonalWebsite",
-    //TODO: change this to deployment URL
-    demo: "https://ethancala-git-main-ethancalas-projects.vercel.app/"
+    demo: "https://www.ethancala.dev/"
   },
   
   {
     title: "PC Builder Prototype",
     description: "A super simple prototype of the PC builder web application.",
     details: "This is a super simple prototype of the PC builder web application. The app is build using ASP.net core MVC C# with a SQLight databaste.",
-    technologies: ["C#", "ASP.NET core", "JavaScript ", "HTML"],
+    technologies: ["C#", "ASP.NET core", "JavaScript", "HTML", "SQLight"],
     github: "https://github.com/ethancala/PCBuilderAppPrototype",
     demo: "https://github.com/ethancala/PCBuilderAppPrototype"
   },
@@ -37,7 +36,7 @@ const projects = [
   {
     title: "Higher Or Lower Game",
     description: "A simple higher or lower card game where users can wager in game currency!",
-    details: "his a Web application using HTML, JS, CSS with bootstrap, python with flask, and a MongoDb database. It is a simple higher or lower card game where users can wager in game currency.",
+    details: "This a Web application using HTML, JS, CSS with bootstrap, python with flask, and a MongoDB database. It is a simple higher or lower card game where users can wager in game currency.",
     technologies: ["Flask", "Python", "JavaScript", "HTML", "MongoDB" , "Bootstrap"],
     github: "https://github.com/ethancala/Higher-or-Lower-Game",
     demo: "https://github.com/ethancala/Higher-or-Lower-Game"

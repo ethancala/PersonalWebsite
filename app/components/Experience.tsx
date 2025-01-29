@@ -7,13 +7,13 @@ import { Button } from "@/components/ui/button"
 const experiences = [
   {
     title: "IT intern | Sidley Austin LLP",
-    description: "QA machines and created documentation on software setup	Deployed and wrote PowerShell scripts to automate simplistic tasks	Wiped, protected, and migrated sensitive data Installed and configured operating systems through server Completed tickets for user support",
+    description: "QA machines and created documentation on software setup. Deployed and wrote PowerShell scripts to automate simplistic tasks. Wiped, protected, and migrated sensitive data. Installed and configured operating systems through server. Completed tickets for user support.",
     date: "2024-02-27 to Present" ,
     website: "https://www.sidley.com/en/us/"
   },
   {
     title: "Web Applications Engineer | BCAMP",
-    description: "Modeled, documented, presented, built, and deployed full stack web application with small team of developers	Created frontend using typescript react, tied fastAPI to frontendIntegrated wallet API into project Developed complex algorithm to compute user’s wallet/asset efficiency using python Built CI/CD pipeline through Vercel",                                                                                                       
+    description: "Modeled, documented, presented, built, and deployed full stack web application with small team of developers.	Created frontend using typescript react, tied fastAPI to frontend. Integrated wallet API into project. Developed complex algorithm to compute user’s wallet/asset efficiency using python. Built CI/CD pipeline through Vercel.",                                                                                                       
     date: "2024-05-29 to 2024-08-03",
     website: "https://bcamp.dev/"
   },
