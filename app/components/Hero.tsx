@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import profilePic from "@/public/me.jpg";
+import profilePic from "@/public/assets/me.png";
 
 export default function Hero() {
 
