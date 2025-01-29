@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image';
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
@@ -16,9 +17,11 @@ export default function Hero() {
         <p className="text-xl mb-8">Computer Scientist |  Software Engineer | IT Professional</p>
         
         <div className="mx-auto mb-6">
-          <img
+          <Image 
             src="/me.jpg"
             alt="Ethan Cala"
+            width={200} // Set width
+            height={200} // Set height
             className="w-48 h-48 rounded-full object-cover mx-auto border-4 border-solid border-gray-800"
           />
         </div>

@@ -44,6 +44,7 @@ export default function Contact() {
         alert("Form failed to submit :(, please try again.");
         throw new Error("Failed to send message")
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast({
         title: "Error!",
