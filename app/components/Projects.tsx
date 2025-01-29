@@ -22,7 +22,7 @@ const projects = [
     technologies: ["Next.js", "React", "Toast ", "Framer", "Tailwind"],
     github: "https://github.com/ethancala/PersonalWebsite",
     //TODO: change this to deployment URL
-    demo: "http://localhost:3000/"
+    demo: "https://ethancala-git-main-ethancalas-projects.vercel.app/"
   },
   
   {
@@ -56,7 +56,14 @@ const projects = [
 ]
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null)
+  const [selectedProject, setSelectedProject] = useState<{
+    title: string
+    description: string
+    details: string
+    technologies: string[]
+    github: string
+    demo: string
+  } | null>(null)
 
   return (
     <section id="projects" className="py-20">
