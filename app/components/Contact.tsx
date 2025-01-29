@@ -17,11 +17,11 @@ export default function Contact() {
 
   //const [successMessage, setSuccessMessage] = useState("")
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any } }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
 
     const formEndpoint = "https://formsubmit.co/ecala420@gmail.com"
