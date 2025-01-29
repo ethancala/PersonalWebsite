@@ -12,21 +12,45 @@ export default function Contact() {
     name: "",
     email: "",
     message: ""
+    
   })
+
+  //const [successMessage, setSuccessMessage] = useState("")
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
-    console.log(formData)
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    })
-    setFormData({ name: "", email: "", message: "" })
+
+    const formEndpoint = "https://formsubmit.co/ecala420@gmail.com"
+
+    try {
+      const response = await fetch(formEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        alert("Form submitted!");
+        // toast({
+        //   title: "Message Sent!",
+        //   description: "Thank you for your message. I'll get back to you soon!",
+        // })
+        setFormData({ name: "", email: "", message: "" })
+      } else {
+        alert("Form failed to submit :(, please try again.");
+        throw new Error("Failed to send message")
+      }
+    } catch (error) {
+      toast({
+        title: "Error!",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      })
+    }
   }
 
   return (
