@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-module.exports = {
+const nextConfig = {
     eslint: {
       ignoreDuringBuilds: true, // Ignore ESLint warnings during the build
     },
-
-}
-export default nextConfig;
+  };
+  
+  module.exports = nextConfig;
+  
