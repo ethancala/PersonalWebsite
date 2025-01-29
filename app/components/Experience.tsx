@@ -20,7 +20,7 @@ const experiences = [
   { //TODO
     title: "Computer Science & Math Tutor | Freelance",
     description: "Provided personalized tutoring in calculus, discrete mathematics, computer science concepts including object-oriented programming (OOP) and full-stack development, with a primary focus on Java programming.",
-    date: "2024-05-29 to 2024-08-03",
+    date: "2023-08-21 to Present",
     //NOTE: change this to personal website on deployment
     website: "http://localhost:3000/"
   }

@@ -24,7 +24,35 @@ const projects = [
     //TODO: change this to deployment URL
     demo: "http://localhost:3000/"
   },
-  // Add more projects as needed
+  
+  {
+    title: "PC Builder Prototype",
+    description: "A super simple prototype of the PC builder web application.",
+    details: "This is a super simple prototype of the PC builder web application. The app is build using ASP.net core MVC C# with a SQLight databaste.",
+    technologies: ["C#", "ASP.NET core", "JavaScript ", "HTML"],
+    github: "https://github.com/ethancala/PCBuilderAppPrototype",
+    demo: "https://github.com/ethancala/PCBuilderAppPrototype"
+  },
+
+  {
+    title: "Higher Or Lower Game",
+    description: "A simple higher or lower card game where users can wager in game currency!",
+    details: "his a Web application using HTML, JS, CSS with bootstrap, python with flask, and a MongoDb database. It is a simple higher or lower card game where users can wager in game currency.",
+    technologies: ["Flask", "Python", "JavaScript", "HTML", "MongoDB" , "Bootstrap"],
+    github: "https://github.com/ethancala/Higher-or-Lower-Game",
+    demo: "https://github.com/ethancala/Higher-or-Lower-Game"
+  },
+
+  {
+    title: "To-do list",
+    description: "A simple to-do list application where users can keep track of their tasks!",
+    details: "This To-do-List application allows users to view, add, delete, edit, complete, and clear tasks (using a web browser like Firefox or Chrome). There are no accounts, no service logins and no software to download. The data entered lives only on the device from which it is created (local storage).",
+    technologies: ["JavaScript", "LocalStorage", "JavaScript", "Jquery", "JSON" , "Bootstrap"],
+    github: "https://github.com/ethancala/ToDolist",
+    demo: "https://github.com/ethancala/ToDolist"
+  },
+
+  
 ]
 
 export default function Projects() {
@@ -33,6 +61,8 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20">
       <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
+
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <motion.div
@@ -41,12 +71,14 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
+            
             <Card>
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
+                
                 <p className="text-sm text-muted-foreground mb-4">
                   Technologies: {project.technologies.join(", ")}
                 </p>
