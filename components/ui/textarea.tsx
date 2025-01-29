@@ -1,7 +1,7 @@
-import * as React from "react";
-import { cn } from "@/lib/utils";
+import * as React from "react"
+import { cn } from "@/lib/utils"
 
-// Directly use React.TextareaHTMLAttributes<HTMLTextAreaElement> in the forwardRef.
+// Remove TextareaProps interface entirely
 const Textarea = React.forwardRef<HTMLTextAreaElement, React.TextareaHTMLAttributes<HTMLTextAreaElement>>(
   ({ className, ...props }, ref) => {
     return (
@@ -13,10 +13,9 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, React.TextareaHTMLAttribu
         ref={ref}
         {...props}
       />
-    );
+    )
   }
-);
+)
+Textarea.displayName = "Textarea"
 
-Textarea.displayName = "Textarea";
-
-export { Textarea };
+export { Textarea }
