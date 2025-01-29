@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import profilePic from "@/public/me.jpg";
 
 export default function Hero() {
 
@@ -18,7 +19,7 @@ export default function Hero() {
         
         <div className="mx-auto mb-6">
           <Image 
-            src="/me.jpg"
+            src={profilePic}
             alt="Ethan Cala"
             width={200} // Set width
             height={200} // Set height
