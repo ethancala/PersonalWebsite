@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import profilePic from "@/public/assets/me.png";
+
 
 export default function Hero() {
 
@@ -18,11 +18,9 @@ export default function Hero() {
         <p className="text-xl mb-8">Computer Scientist |  Software Engineer | IT Professional</p>
         
         <div className="mx-auto mb-6">
-          <Image 
-            src={profilePic}
+        <img
+            src="/assets/me.png"  
             alt="Ethan Cala"
-            width={200} // Set width
-            height={200} // Set height
             className="w-48 h-48 rounded-full object-cover mx-auto border-4 border-solid border-gray-800"
           />
         </div>
