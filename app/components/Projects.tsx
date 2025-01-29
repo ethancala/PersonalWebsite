@@ -8,20 +8,21 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with React, Node.js, and MongoDB.",
-    details: "This project implements user authentication, product management, shopping cart functionality, and secure payment processing using Stripe.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-    github: "https://github.com/yourusername/ecommerce-platform",
-    demo: "https://ecommerce-platform-demo.vercel.app"
+    title: "Mode Score",
+    description: "A full-stack DeFi solution built and Deployed during my time at BCAMP",
+    details: "Mode Score is a dApp that evaluates and optimizes your digital assets across multiple ecosystems with a capital efficiency score, and a user-friendly interface. It integrates wallets, recommends opportunities, and is especially helpful for newcomers to DeFi.",
+    technologies: ["React", "Next.js", "Vercel", "TypeScript", "Python", "fastAPI"],
+    github: "https://github.com/0xBcamp/mode-score-frontend",
+    demo: "https://mode-score-app.vercel.app/"
   },
   {
-    title: "Machine Learning Image Classifier",
-    description: "An image classification model using TensorFlow and Keras.",
-    details: "This project uses transfer learning on a pre-trained CNN to classify images into 10 different categories. It includes data preprocessing, model training, and a web interface for easy use.",
-    technologies: ["Python", "TensorFlow", "Keras", "Flask", "HTML/CSS"],
-    github: "https://github.com/yourusername/ml-image-classifier",
-    demo: "https://ml-image-classifier-demo.herokuapp.com"
+    title: "Portfolio Webstie",
+    description: "Your currently looking at it!",
+    details: "A collection of my professional work, including projects, achievements, and skills.",
+    technologies: ["Next.js", "React", "Toast ", "Framer", "Tailwind"],
+    github: "https://github.com/ethancala/PersonalWebsite",
+    //TODO: change this to deployment URL
+    demo: "http://localhost:3000/"
   },
   // Add more projects as needed
 ]
