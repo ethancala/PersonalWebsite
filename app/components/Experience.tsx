@@ -16,6 +16,13 @@ const experiences = [
     description: "Modeled, documented, presented, built, and deployed full stack web application with small team of developers	Created frontend using typescript react, tied fastAPI to frontendIntegrated wallet API into project Developed complex algorithm to compute user’s wallet/asset efficiency using python Built CI/CD pipeline through Vercel",                                                                                                       
     date: "2024-05-29 to 2024-08-03",
     website: "https://bcamp.dev/"
+  },
+  { //TODO
+    title: "Computer Science & Math Tutor | Freelance",
+    description: "Provided personalized tutoring in calculus, discrete mathematics, computer science concepts including object-oriented programming (OOP) and full-stack development, with a primary focus on Java programming.",
+    date: "2024-05-29 to 2024-08-03",
+    //NOTE: change this to personal website on deployment
+    website: "http://localhost:3000/"
   }
 ]
 

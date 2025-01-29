@@ -13,7 +13,7 @@ export default function Hero() {
         transition={{ duration: 0.5 }}
       >
         <h1 className="text-4xl font-bold mb-4">Ethan Cala</h1>
-        <p className="text-xl mb-8">Computer Scientist |  Software Developer | IT proffesional</p>
+        <p className="text-xl mb-8">Computer Scientist |  Software Engineer | IT Professional</p>
         <p className="max-w-2xl mx-auto mb-8">
           Passionate about creating innovative solutions and constantly learning new technologies. 
           Specializing in web development, IT, and software engineering.

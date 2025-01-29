@@ -4,8 +4,8 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 
 const skills = [
-  "JavaScript", "TypeScript", "React", "Node.js", "Python", "Java", 
-  "SQL", "MongoDB", "Git", "Docker", "AWS", "Machine Learning"
+  "Python", "Java", "React", "Node.js", "JavaScript", "TypeScript", 
+  "SQL", "MongoDB", "Git", "C#", ".Net", "Vercel", "QA", "Operating Systems", "Scripting & Automation"
 ]
 
 export default function Skills() {
