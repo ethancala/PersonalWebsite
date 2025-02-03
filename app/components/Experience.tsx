@@ -21,8 +21,7 @@ const experiences = [
     title: "Computer Science & Math Tutor | Freelance",
     description: "Provided personalized tutoring in calculus, discrete mathematics, computer science concepts including object-oriented programming (OOP) and full-stack development, with a primary focus on Java programming.",
     date: "2023-08-21 to Present",
-    //NOTE: change this to personal website on deployment
-    website: "http://localhost:3000/"
+    website: "https://www.ethancala.dev/"
   }
 ]
 
