@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const skills = [
   "Python", "Java", "React", "Node.js", "JavaScript", "TypeScript", 
-  "SQL", "MongoDB", "Git", "C#", ".Net", "Vercel", "QA", "Selenium", "Azure DevOps"
+  "SQL", "MongoDB", "Git", "C#", ".Net", "Vercel", "QA", "Selenium", "Azure DevOps","REST APIs"
 ]
 
 export default function Skills() {
