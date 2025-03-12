@@ -6,16 +6,16 @@ import { Button } from "@/components/ui/button"
 
 const experiences = [
   {
-    title: "IT intern | Sidley Austin LLP",
-    description: "IT Engineering: Developed Python Selenium testing applications to monitor, maintain and test IT infrastructure. Developed Python, Powershell, and bash scripts to automate tasks that drastically improved productivity. Imaged and deployed machines for users. Performed Data migrations for users, while maintaining system availability. Wiped 100+ physical machine's data by deploying scripts that comply with department of defense standards. Monitor System trending incidents and executed solutions apart of a team.  Contributed to the new hire onboard process by providing seamless tech integration. Big Law Firm Experience",
-    date: "2024-02-27 to Present" ,
-    website: "https://www.sidley.com/en/us/"
-  },
-  {
     title: "Web Applications Engineer | BCAMP",
     description: "Modeled, documented, presented, built, and deployed full stack web application with small team of developers.	Created frontend using typescript react, tied fastAPI to frontend. Integrated wallet API into project. Developed complex algorithm to compute user’s wallet/asset efficiency using python. Built CI/CD pipeline through Vercel.",                                                                                                       
     date: "2024-05-29 to 2024-08-03",
     website: "https://bcamp.dev/"
+  },
+   {
+    title: "IT intern | Sidley Austin LLP",
+    description: "IT Engineering: Developed Python Selenium testing applications to monitor, maintain and test IT infrastructure. Developed Python, Powershell, and bash scripts to automate tasks that drastically improved productivity. Imaged and deployed machines for users. Performed Data migrations for users, while maintaining system availability. Wiped 100+ physical machine's data by deploying scripts that comply with department of defense standards. Monitor System trending incidents and executed solutions apart of a team.  Contributed to the new hire onboard process by providing seamless tech integration. Big Law Firm Experience",
+    date: "2024-02-27 to Present" ,
+    website: "https://www.sidley.com/en/us/"
   },
   { //TODO
     title: "Computer Science & Math Tutor | Freelance",
