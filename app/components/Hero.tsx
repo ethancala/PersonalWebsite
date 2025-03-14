@@ -30,7 +30,7 @@ export default function Hero() {
           Specializing in web development, IT, and software engineering.
         </p>
 
-        <a href="/EthanCalaRE.docx" download="EthanCalaResume.docx"><Button variant="outline"  className="bg-white text-black border-2 border-black hover:text-black focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors">
+        <a href="/EthanCalaResume.docx" download="EthanCalaResume.docx"><Button variant="outline"  className="bg-white text-black border-2 border-black hover:text-black focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors">
   Download CV
 </Button></a>
        
