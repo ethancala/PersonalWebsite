@@ -21,7 +21,7 @@ export default function Navbar() {
           <Link href="#projects" className="block px-4 py-2 hover:bg-accent">Projects</Link>
           <Link href="#experience" className="block px-4 py-2 hover:bg-accent">Experience</Link>
           <Link href="#contact" className="block px-4 py-2 hover:bg-accent">Contact</Link>
-          <Link href="#CMLVersion" className="block px-4 py-2 hover:bg-accent">Command Line</Link>
+          <Link href="/terminal" className="block px-4 py-2 hover:bg-accent">Command Line</Link>
         </div>
         <div className="flex items-center space-x-2">
           <Button
@@ -46,7 +46,7 @@ export default function Navbar() {
           <Link href="#projects" className="block px-4 py-2 hover:bg-accent">Projects</Link>
           <Link href="#experience" className="block px-4 py-2 hover:bg-accent">Experience</Link>
           <Link href="#contact" className="block px-4 py-2 hover:bg-accent">Contact</Link>
-          <Link href="#CMLVersion" className="block px-4 py-2 hover:bg-accent">Command Line</Link>
+          <Link href="/terminal" className="block px-4 py-2 hover:bg-accent">Command Line</Link>
         </div>
       )}
     </nav>
