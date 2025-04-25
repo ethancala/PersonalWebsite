@@ -23,6 +23,14 @@ const projects = [
     github: "https://github.com/ethancala/PersonalWebsite",
     demo: "https://www.ethancala.dev/"
   },
+  {
+    title: "Syllabye",
+    description: "Syllabye is a web-based platform designed to simplify syllabus creation and access for professors and students.",
+    details: "Syllabye enables users to build, upload, and interact with dynamic syllabi. The platform prioritizes accessibility, usability, and adaptability by implementing modular components, translation-ready interfaces, and scalable design systems.",
+    technologies: ["Vite-React", "Firebase", "Tailwind", "NodeJS", "JSON" , "Bootstrap"],
+    github: "https://github.com/ChairForce-1-0/Syllabye-Capstone",
+    demo: "https://gentle-moss-0fd314310.4.azurestaticapps.net/"
+  },
   
   {
     title: "PC Builder Prototype",
@@ -49,9 +57,7 @@ const projects = [
     technologies: ["JavaScript", "LocalStorage", "JavaScript", "Jquery", "JSON" , "Bootstrap"],
     github: "https://github.com/ethancala/ToDolist",
     demo: "https://github.com/ethancala/ToDolist"
-  },
-
-  
+  }
 ]
 
 export default function Projects() {
