@@ -12,7 +12,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20">
       <h2 className="text-3xl font-bold mb-8 text-center">Skills</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
         {skills.map((skill, index) => (
           <motion.div
             key={skill}
@@ -20,7 +20,7 @@ export default function Skills() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Card>
+            <Card className="transition-transform duration-300 ease-in-out relative hover:translate-y-[-10px] hover:shadow-lg ">
               <CardContent className="flex items-center justify-center p-4">
                 <span>{skill}</span>
               </CardContent>

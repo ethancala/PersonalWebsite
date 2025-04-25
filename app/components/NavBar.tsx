@@ -17,10 +17,11 @@ export default function Navbar() {
           Ethan Cala
         </Link>
         <div className="hidden md:flex space-x-4">
-          <Link href="#skills" className="hover:text-primary">Skills</Link>
-          <Link href="#projects" className="hover:text-primary">Projects</Link>
-          <Link href="#experience" className="hover:text-primary">Experience</Link>
-          <Link href="#contact" className="hover:text-primary">Contact</Link>
+          <Link href="#skills" className="block px-4 py-2 hover:bg-accent">Skills</Link>
+          <Link href="#projects" className="block px-4 py-2 hover:bg-accent">Projects</Link>
+          <Link href="#experience" className="block px-4 py-2 hover:bg-accent">Experience</Link>
+          <Link href="#contact" className="block px-4 py-2 hover:bg-accent">Contact</Link>
+          <Link href="#CMLVersion" className="block px-4 py-2 hover:bg-accent">Command Line</Link>
         </div>
         <div className="flex items-center space-x-2">
           <Button
@@ -45,6 +46,7 @@ export default function Navbar() {
           <Link href="#projects" className="block px-4 py-2 hover:bg-accent">Projects</Link>
           <Link href="#experience" className="block px-4 py-2 hover:bg-accent">Experience</Link>
           <Link href="#contact" className="block px-4 py-2 hover:bg-accent">Contact</Link>
+          <Link href="#CMLVersion" className="block px-4 py-2 hover:bg-accent">Command Line</Link>
         </div>
       )}
     </nav>
