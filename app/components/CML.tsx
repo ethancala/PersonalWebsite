@@ -196,8 +196,6 @@ export default function CML() {
 
   return (
     <div className="bg-[#0d1117] text-gray-100 font-mono p-4 min-h-screen overflow-y-auto rounded-md shadow-lg">
-         <div className="absolute top-0 left-0 right-0 h-4 bg-gradient-to-b from-[#0d1117] to-transparent z-10" />
-         <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-[#0d1117] to-transparent z-10" />
       <div>
         {history.map((line, idx) =>
           line.trim() === "" ? (
