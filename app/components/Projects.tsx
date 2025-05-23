@@ -2,9 +2,23 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle
+} from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from "@/components/ui/dialog"
 
 const projects = [
   {
@@ -25,56 +39,45 @@ const projects = [
   },
   {
     title: "Syllabye",
-    description: "Syllabye is a web-based platform designed to simplify syllabus creation and access for professors and students.",
+    description: "A web platform to simplify syllabus creation and access for professors and students.",
     details: "Syllabye enables users to build, upload, and interact with dynamic syllabi. The platform prioritizes accessibility, usability, and adaptability by implementing modular components, translation-ready interfaces, and scalable design systems.",
-    technologies: ["Vite-React", "Firebase", "Tailwind", "NodeJS", "JSON" , "Bootstrap"],
+    technologies: ["Vite-React", "Firebase", "Tailwind", "NodeJS", "JSON", "Bootstrap"],
     github: "https://github.com/ChairForce-1-0/Syllabye-Capstone",
     demo: "https://gentle-moss-0fd314310.4.azurestaticapps.net/"
   },
-  
   {
     title: "PC Builder Prototype",
-    description: "A super simple prototype of the PC builder web application.",
-    details: "This is a super simple prototype of the PC builder web application. The app is build using ASP.net core MVC C# with a SQLight databaste.",
-    technologies: ["C#", "ASP.NET core", "JavaScript", "HTML", "SQLight"],
+    description: "A prototype of a custom PC builder app using ASP.NET Core.",
+    details: "Built using ASP.NET Core MVC and SQLite, this prototype demonstrates an e-commerce-like flow for selecting and validating PC components.",
+    technologies: ["C#", "ASP.NET core", "JavaScript", "HTML", "SQLite"],
     github: "https://github.com/ethancala/PCBuilderAppPrototype",
     demo: "https://github.com/ethancala/PCBuilderAppPrototype"
   },
-
   {
     title: "Higher Or Lower Game",
-    description: "A simple higher or lower card game where users can wager in game currency!",
-    details: "This a Web application using HTML, JS, CSS with bootstrap, python with flask, and a MongoDB database. It is a simple higher or lower card game where users can wager in game currency.",
-    technologies: ["Flask", "Python", "JavaScript", "HTML", "MongoDB" , "Bootstrap"],
+    description: "A simple card game where users wager in-game currency.",
+    details: "Web app using Flask, Bootstrap, and MongoDB. Players guess if the next card is higher or lower and can wager virtual currency on their prediction.",
+    technologies: ["Flask", "Python", "JavaScript", "HTML", "MongoDB", "Bootstrap"],
     github: "https://github.com/ethancala/Higher-or-Lower-Game",
     demo: "https://github.com/ethancala/Higher-or-Lower-Game"
   },
-
   {
-    title: "To-do list",
-    description: "A simple to-do list application where users can keep track of their tasks!",
-    details: "This To-do-List application allows users to view, add, delete, edit, complete, and clear tasks (using a web browser like Firefox or Chrome). There are no accounts, no service logins and no software to download. The data entered lives only on the device from which it is created (local storage).",
-    technologies: ["JavaScript", "LocalStorage", "JavaScript", "Jquery", "JSON" , "Bootstrap"],
+    title: "To-do List",
+    description: "A minimalist task management app using local storage.",
+    details: "This app allows users to view, add, delete, and complete tasks entirely in the browser using local storage. No sign-ins, no backend.",
+    technologies: ["JavaScript", "LocalStorage", "jQuery", "JSON", "Bootstrap"],
     github: "https://github.com/ethancala/ToDolist",
     demo: "https://github.com/ethancala/ToDolist"
   }
 ]
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState<{
-    title: string
-    description: string
-    details: string
-    technologies: string[]
-    github: string
-    demo: string
-  } | null>(null)
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null)
 
   return (
     <section id="projects" className="py-20">
       <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
 
-      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <motion.div
@@ -83,34 +86,59 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            
-            <Card>
+            <Card className="transition-all hover:shadow-md hover:scale-[1.01] duration-200">
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                
-                <p className="text-sm text-muted-foreground mb-4">
-                  Technologies: {project.technologies.join(", ")}
-                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-muted px-2 py-1 text-xs rounded-md text-muted-foreground"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </CardContent>
-              <CardFooter className="flex justify-between">
+              <CardFooter className="flex justify-between items-center">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="outline" onClick={() => setSelectedProject(project)}>Learn More</Button>
+                    <Button
+                      variant="outline"
+                      onClick={() => setSelectedProject(project)}
+                    >
+                      Learn More
+                    </Button>
                   </DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
                       <DialogTitle>{selectedProject?.title}</DialogTitle>
-                      <DialogDescription>{selectedProject?.details}</DialogDescription>
+                      <DialogDescription>{selectedProject?.description}</DialogDescription>
                     </DialogHeader>
-                    <div className="flex justify-between mt-4">
-                      <Button asChild>
-                        <a href={selectedProject?.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <div className="mt-4 space-y-3 text-sm">
+                      <p>{selectedProject?.details}</p>
+                      <div>
+                        <strong>Technologies:</strong>
+                        <ul className="list-disc list-inside mt-1">
+                          {selectedProject?.technologies.map((tech) => (
+                            <li key={tech}>{tech}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="flex justify-end gap-2 mt-6">
+                      <Button asChild variant="secondary">
+                        <a href={selectedProject?.github} target="_blank" rel="noopener noreferrer">
+                          GitHub
+                        </a>
                       </Button>
                       <Button asChild>
-                        <a href={selectedProject?.demo} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <a href={selectedProject?.demo} target="_blank" rel="noopener noreferrer">
+                          Live Demo
+                        </a>
                       </Button>
                     </div>
                   </DialogContent>
