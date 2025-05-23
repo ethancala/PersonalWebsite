@@ -12,6 +12,9 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
+  // Include "terminal" as an extra item
+  const navItems = ["skills", "projects", "experience", "contact", "terminal"]
+
   return (
     <nav className="sticky top-0 z-50 bg-background/70 backdrop-blur-md border-b border-border shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -21,10 +24,10 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex space-x-6 items-center text-sm font-medium">
-          {["skills", "projects", "experience", "contact"].map((id) => (
+          {navItems.map((id) => (
             <Link
               key={id}
-              href={`#${id}`}
+              href={id === "terminal" ? "/terminal" : `#${id}`}
               className="relative group transition-colors hover:text-primary"
             >
               <span>{id.charAt(0).toUpperCase() + id.slice(1)}</span>
@@ -59,10 +62,10 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden px-4 pb-4 pt-2 space-y-2 text-sm font-medium animate-slide-down">
-          {["skills", "projects", "experience", "contact"].map((id) => (
+          {navItems.map((id) => (
             <Link
               key={id}
-              href={`#${id}`}
+              href={id === "terminal" ? "/terminal" : `#${id}`}
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 rounded hover:bg-accent transition-colors"
             >

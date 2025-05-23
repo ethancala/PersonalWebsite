@@ -36,8 +36,8 @@ export default function Hero() {
         </p>
 
         <a
-          href="/EthanCalaResume.docx"
-          download="EthanCalaResume.docx"
+          href="/EthanCalaResume.pdf"
+          download="EthanCalaResume.pdf"
         >
           <Button variant="default" size="lg" className="transition-transform hover:scale-105">
             Download CV
