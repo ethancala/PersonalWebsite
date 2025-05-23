@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 
 const COMMANDS: Record<string, string> = {
-  help: "Available commands: about, experience, projects, resume, clear, gui",
+  help: "Available commands: about, experience, projects, skills, resume, clear, gui",
   about:
     "I'm Ethan Cala — a software & ops engineer focused on automation and telemetry. I am passionate about building scalable, elegant solutions through software and systems design. I specialize in full-stack web development, IT automation, and tech operations in enterprise environments. I currently work at Sidley Austin LLP!",
 }
@@ -18,6 +18,9 @@ export default function CML() {
   const [caretPos, setCaretPos] = useState(0)
   const [commandHistory, setCommandHistory] = useState<string[]>([])
   const [historyIndex, setHistoryIndex] = useState<number | null>(null)
+  const [isFocused, setIsFocused] = useState(true)
+  const inputRef = useRef<HTMLInputElement>(null)
+
 
   useEffect(() => {
     setHistory([
@@ -89,6 +92,42 @@ export default function CML() {
       return
     }
 
+    if (cmd === "skills") {
+  const skillsLines = [
+    "Technologies & Tools I Work With:",
+    "",
+    "- Python",
+    "- Java",
+    "- React",
+    "- Node.js",
+    "- JavaScript",
+    "- TypeScript",
+    "- SQL",
+    "- MongoDB",
+    "- Git",
+    "- C#",
+    "- .NET",
+    "- Vercel",
+    "- QA",
+    "- Selenium",
+    "- Azure DevOps",
+  ]
+
+  setHistory((prev) => [...prev, `> ${cmd}`])
+  setCommandHistory((prev) => [...prev, cmd])
+  setInput("")
+  setCaretPos(0)
+
+  skillsLines.forEach((line, i) => {
+    setTimeout(() => {
+      setHistory((prev) => [...prev, line])
+    }, i * 100)
+  })
+
+  return
+}
+
+
     if (cmd === "projects") {
       const projectLines = [
         "Mode Score",
@@ -156,7 +195,9 @@ export default function CML() {
   }
 
   return (
-    <div className="bg-black text-green-400 font-mono p-4 h-[80vh] overflow-y-auto">
+    <div className="bg-[#0d1117] text-gray-100 font-mono p-4 min-h-screen overflow-y-auto rounded-md shadow-lg">
+         <div className="absolute top-0 left-0 right-0 h-4 bg-gradient-to-b from-[#0d1117] to-transparent z-10" />
+         <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-[#0d1117] to-transparent z-10" />
       <div>
         {history.map((line, idx) =>
           line.trim() === "" ? (
@@ -168,7 +209,11 @@ export default function CML() {
           )
         )}
         <div ref={bottomRef} />
-
+    <div
+        className="cursor-text"
+        onClick={() => inputRef.current?.focus()}
+        >
+    
         <form
           onSubmit={(e) => {
             e.preventDefault()
@@ -176,17 +221,29 @@ export default function CML() {
           }}
           className="flex items-center gap-2 mt-2"
         >
-          <span className="text-green-300">$</span>
+          <span className="text-white">
+  <span className="text-green-500 font-semibold">ethan</span>
+  <span className="text-white">@</span>
+  <span className="text-cyan-400">portfolio</span>
+  <span className="text-white">:~$</span>
+</span>
+
           <div className="flex items-center flex-1 whitespace-pre-wrap relative">
             <span className="text-green-400">{input.slice(0, caretPos)}</span>
-            <span className="w-[10px] h-[20px] bg-green-400 inline-block animate-blink" />
+            <span
+                 className={`w-[10px] h-[20px] bg-green-400 inline-block ${
+                    isFocused ? "animate-blink" : ""
+                }`}
+            />
             <span className="text-green-400">{input.slice(caretPos)}</span>
-
             <input
+              ref={inputRef}
               type="text"
               aria-label="Terminal input"
               className="absolute w-0 h-0 opacity-0 caret-transparent"
               value={input}
+              onFocus={() => setIsFocused(true)}
+              onBlur={() => setIsFocused(false)}
               onBeforeInput={(e) => {
                 const inputEvent = e.nativeEvent as InputEvent
                 const char = inputEvent.data
@@ -202,7 +259,14 @@ export default function CML() {
                   e.preventDefault()
                   handleCommand(input)
                 }
-
+                
+                if (e.key === " ") {
+                  e.preventDefault()
+                  const newValue = input.slice(0, caretPos) + " " + input.slice(caretPos)
+                  setInput(newValue)
+                  setCaretPos((prev) => prev + 1)
+                  return
+                }
                 if (e.key === "ArrowLeft") {
                   e.preventDefault()
                   setCaretPos((pos) => Math.max(0, pos - 1))
@@ -267,6 +331,7 @@ export default function CML() {
             />
           </div>
         </form>
+        </div>
       </div>
     </div>
   )
