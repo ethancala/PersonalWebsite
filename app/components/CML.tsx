@@ -1,7 +1,8 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
+
 
 const COMMANDS: Record<string, string> = { 
   help: "Available commands: about, experience, projects, resume, clear, gui",
@@ -39,6 +40,7 @@ August 2023 – Present
 
 
 export default function CML() {
+  const bottomRef = useRef<HTMLDivElement>(null)
   const [history, setHistory] = useState<string[]>([])
   const [input, setInput] = useState("")
   const [commandHistory, setCommandHistory] = useState<string[]>([])
@@ -191,6 +193,11 @@ const handleCommand = (cmd: string) => {
     ])
   }, [])
 
+  useEffect(() => {
+  bottomRef.current?.scrollIntoView({ behavior: "smooth" })
+}, [history])
+
+
   return (
     <div className="bg-black text-green-400 font-mono p-4 h-[80vh] overflow-y-auto">
       <div>
@@ -201,7 +208,8 @@ const handleCommand = (cmd: string) => {
             <div key={idx} className="whitespace-pre-wrap">{line}</div>
          )
     )}
-
+    {/* Auto-scroll target */}
+    <div ref={bottomRef} />
         <form
           onSubmit={(e) => {
             e.preventDefault()
