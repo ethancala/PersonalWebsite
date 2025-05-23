@@ -173,8 +173,8 @@ export default function CML() {
       setCaretPos(0)
 
       const link = document.createElement("a")
-      link.href = "/EthanCalaREsume.pdf"
-      link.download = "EthanCalaREsume.pdf"
+      link.href = "/EthanCalaResume.pdf"
+      link.download = "EthanCalaResume.pdf"
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
