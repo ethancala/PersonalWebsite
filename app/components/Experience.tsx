@@ -6,24 +6,50 @@ import { Button } from "@/components/ui/button"
 
 const experiences = [
   {
-    title: "Web Applications Engineer | BCAMP",
-    description: "Modeled, documented, presented, built, and deployed full stack web application with small team of developers.	Created frontend using typescript react, tied fastAPI to frontend. Integrated wallet API into project. Developed complex algorithm to compute user’s wallet/asset efficiency using python. Built CI/CD pipeline through Vercel.",                                                                                                       
-    date: "2024-05-29 to 2024-08-03",
-    website: "https://bcamp.dev/"
+    role: "Web Applications Developer (Frontend)",
+    company: "BCAMP",
+    location: "Chicago, IL",
+    date: "June 2024 – August 2024",
+    website: "https://bcamp.dev/",
+    responsibilities: [
+      "Designed and implemented a responsive web interface using React, TypeScript, and Tailwind, deployed via Vercel.",
+      "Integrated WalletAPI services, enabling support for 400+ wallet services through secure connection flows.",
+      "Consumed and rendered backend data from a Python FastAPI service, optimizing user experience and interface responsiveness.",
+      "Authored internal documentation to support component reusability, onboarding, and long-term maintenance.",
+      "Deployed production builds using Vercel’s cloud-based CI/CD platform, ensuring fast iteration and reliable uptime."
+    ]
   },
-   {
-    title: "IT intern | Sidley Austin LLP",
-    description: "IT Engineering: Developed Python Selenium testing applications to monitor, maintain and test IT infrastructure. Developed Python, Powershell, and bash scripts to automate tasks that drastically improved productivity. Imaged and deployed machines for users. Performed Data migrations for users, while maintaining system availability. Wiped 100+ physical machine's data by deploying scripts that comply with department of defense standards. Monitor System trending incidents and executed solutions apart of a team.  Contributed to the new hire onboard process by providing seamless tech integration. Big Law Firm Experience",
-    date: "2024-02-27 to Present" ,
-    website: "https://www.sidley.com/en/us/"
+  {
+    role: "IT Operations Engineer Intern",
+    company: "Sidley Austin LLP",
+    location: "Chicago, IL",
+    date: "February 2024 – Present",
+    website: "https://www.sidley.com/en/us/",
+    responsibilities: [
+      "Designed and deployed automation using Python, Selenium, and SQL to interact with secured SSRS portals for EOD reporting.",
+      "Developed telemetry integration pipelines feeding Splunk and internal monitoring systems from legacy platforms.",
+      "Automated infrastructure checks using Python, PowerShell, and Bash, reducing manual overhead for ITOC operations.",
+      "Imaged and deployed machines for 500+ users; migrated user data and performed DoD-compliant secure device wipes across 250+ assets.",
+      "Monitored incidents, collaborated on resolutions, and contributed to enterprise IT support operations.",
+      "Assisted with new hire onboarding by ensuring seamless tech integration.",
+      "Gained hands-on experience at the intersection of IT operations, software engineering, and observability."
+    ]
   },
-  { //TODO
-    title: "Computer Science & Math Tutor | Freelance",
-    description: "Provided personalized tutoring in calculus, discrete mathematics, computer science concepts including object-oriented programming (OOP) and full-stack development, with a primary focus on Java programming.",
-    date: "2023-08-21 to Present",
-    website: "https://www.ethancala.dev/"
+  {
+    role: "Computer Science & Math Tutor",
+    company: "Freelance",
+    location: "Remote",
+    date: "August 2023 – Present",
+    website: "https://www.ethancala.dev/",
+    responsibilities: [
+      "Provided tutoring in calculus, discrete mathematics, and computer science topics, including object-oriented and full-stack development.",
+      "Specialized in Java programming and guided students through foundational and advanced concepts.",
+      "Designed customized lesson plans to meet individual student needs and learning styles."
+    ]
   }
-]
+];
+
+
 
 export default function Experience() {
   return (
@@ -32,22 +58,27 @@ export default function Experience() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {experiences.map((post, index) => (
           <motion.div
-            key={post.title}
+            key={post.role + post.company}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <Card>
               <CardHeader>
-                <CardTitle>{post.title}</CardTitle>
-                <CardDescription>{post.date}</CardDescription>
+                <CardTitle className="text-lg font-semibold">{post.role}</CardTitle>
+                <CardDescription className="text-sm">{post.company} · {post.location}</CardDescription>
+                <p className="text-xs text-muted-foreground">{post.date}</p>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">{post.description}</p>
+                <ul className="list-disc list-inside text-sm space-y-1 text-muted-foreground">
+                  {post.responsibilities.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
               </CardContent>
               <CardFooter>
-                <Button asChild>
-                  <a href={post.website}>Employer Website</a>
+                <Button asChild variant="link">
+                  <a href={post.website} target="_blank" rel="noopener noreferrer">Visit Employer Website</a>
                 </Button>
               </CardFooter>
             </Card>
@@ -55,5 +86,5 @@ export default function Experience() {
         ))}
       </div>
     </section>
-  )
+  );
 }

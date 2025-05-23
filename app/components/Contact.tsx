@@ -8,21 +8,16 @@ import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-    
-  })
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" })
+  const [loading, setLoading] = useState(false)
 
-  //const [successMessage, setSuccessMessage] = useState("")
-
-  const handleChange = (e: { target: { name: any; value: any } }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setLoading(true)
 
     const formEndpoint = "https://formsubmit.co/ecala420@gmail.com"
 
@@ -30,37 +25,40 @@ export default function Contact() {
       const response = await fetch(formEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData)
       })
 
       if (response.ok) {
-        alert("Form submitted!");
-        // toast({
-        //   title: "Message Sent!",
-        //   description: "Thank you for your message. I'll get back to you soon!",
-        // })
+        toast({
+          title: "Message Sent!",
+          description: "Thanks for reaching out — I’ll be in touch soon.",
+        })
         setFormData({ name: "", email: "", message: "" })
       } else {
-        alert("Form failed to submit :(, please try again.");
-        throw new Error("Failed to send message")
+        throw new Error("Form submission failed")
       }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast({
-        title: "Error!",
+        title: "Error",
         description: "Something went wrong. Please try again later.",
         variant: "destructive",
       })
+    } finally {
+      setLoading(false)
     }
   }
 
   return (
-    <section id="contact" className="py-20">
-      <h2 className="text-3xl font-bold mb-8 text-center">Contact Me</h2>
+    <section id="contact" className="py-20 bg-background">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-bold mb-2">Contact Me</h2>
+        <p className="text-muted-foreground text-sm">Have a question or want to work together? Send me a message.</p>
+      </div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.6 }}
         className="max-w-md mx-auto"
       >
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -86,8 +84,15 @@ export default function Contact() {
             value={formData.message}
             onChange={handleChange}
             required
+            className="min-h-[120px]"
           />
-          <Button type="submit" className="w-full">Send Message</Button>
+          <Button
+            type="submit"
+            className="w-full"
+            disabled={loading}
+          >
+            {loading ? "Sending..." : "Send Message"}
+          </Button>
         </form>
       </motion.div>
     </section>
