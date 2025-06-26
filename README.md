@@ -1,6 +1,4 @@
-A good README for your personal website built with **Next.js** and **React** can highlight the core features, installation steps, and usage instructions. Here's a well-structured example you can use:
 
----
 
 # Ethan Cala's Personal Website
 
@@ -9,7 +7,6 @@ Welcome to my personal website built with **Next.js** and **React**! This websit
 ## Features
 
 - **Personal Portfolio**: A collection of my professional work, including projects, achievements, and skills.
-- **Blog Section**: A place where I share insights on technology, programming, and personal development.
 - **Contact Form**: A contact form where visitors can send me messages directly, with toast notifications on successful submission.
 - **Responsive Design**: Optimized for mobile and desktop viewing.
 - **Smooth Animations**: Powered by Framer Motion for engaging user interactions.
@@ -20,7 +17,6 @@ Welcome to my personal website built with **Next.js** and **React**! This websit
 - **React**: A JavaScript library for building user interfaces.
 - **Tailwind CSS**: A utility-first CSS framework for styling the app.
 - **Framer Motion**: A library for animations to enhance the user experience.
-- **Toast Notifications**: For providing user feedback when forms are submitted.
 
 ## Setup
 
@@ -92,7 +88,6 @@ Here is a quick overview of the file structure:
 ## Features in Progress
 
 - [ ] Blog section with dynamic posts
-- [ ] Dark mode toggle
 - [ ] Enhanced form validation
 
 ## Contact
@@ -107,16 +102,3 @@ Feel free to get in touch via the contact form or by reaching out to me directly
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
-### How This Works:
-
-- **Features**: Give a brief description of the key features of the website. In this case, we mention the portfolio, blog, and contact form with animation.
-- **Technologies Used**: Lists the main technologies you used for building the app (Next.js, React, Tailwind CSS, Framer Motion).
-- **Setup**: Provides clear and concise steps to get the project up and running locally.
-- **File Structure**: A simple overview of the folder structure to help contributors or developers understand the organization.
-- **Features in Progress**: If you're planning to add features later, mention them in this section so that others know what's coming.
-- **Contact**: Include your contact information so visitors can reach you.
-- **License**: It's good practice to include a license if you're open-sourcing your project (MIT License is commonly used).
-
-Feel free to adjust the content to your specific needs! This should help anyone who wants to understand your project, run it locally, or contribute.
