@@ -23,7 +23,7 @@ const experiences = [
     role: "IT Operations Engineer Intern",
     company: "Sidley Austin LLP",
     location: "Chicago, IL",
-    date: "February 2024 – Present",
+    date: "February 2024 – July 2025",
     website: "https://www.sidley.com/en/us/",
     responsibilities: [
       "Designed and deployed automation using Python, Selenium, and SQL to interact with secured SSRS portals for EOD reporting.",
@@ -35,16 +35,14 @@ const experiences = [
       "Gained hands-on experience at the intersection of IT operations, software engineering, and observability."
     ]
   },
-  {
-    role: "Computer Science & Math Tutor",
-    company: "Freelance",
-    location: "Remote",
-    date: "August 2023 – Present",
-    website: "https://www.ethancala.dev/",
+    {
+    role: "Logistics SoftwareOps Engineer",
+    company: "KNAPP North America",
+    location: "Elmhurst, IL",
+    date: "July 2025 – Present",
+    website: "https://www.knapp.com/",
     responsibilities: [
-      "Provided tutoring in calculus, discrete mathematics, and computer science topics, including object-oriented and full-stack development.",
-      "Specialized in Java programming and guided students through foundational and advanced concepts.",
-      "Designed customized lesson plans to meet individual student needs and learning styles."
+      "As a Software Operations Engineer, I use my software engineering & ITOps experience to ensure that the fast-paced distribution facility is always running at full capacity, carrying out essential maintenance on the facilities software, bug fixing and making sure that the software to control all the systems within the facility are running correctly."
     ]
   }
 ];

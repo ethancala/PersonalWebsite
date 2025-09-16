@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 const COMMANDS: Record<string, string> = {
   help: "Available commands: about, experience, projects, skills, resume, clear, gui",
   about:
-    "I'm Ethan Cala — a software & ops engineer focused on automation and telemetry. I am passionate about building scalable, elegant solutions through software and systems design. I specialize in full-stack web development, IT automation, and tech operations in enterprise environments. I currently work at Sidley Austin LLP!",
+    "I'm Ethan Cala — a software & ops engineer focused on automation and telemetry. I am passionate about building scalable, elegant solutions through software and systems design. I specialize in full-stack web development, IT automation, and tech operations in enterprise environments. I currently work at KNAPP in DevOps!",
 }
 
 export default function CML() {
@@ -77,12 +77,12 @@ export default function CML() {
         "- Supported incidents and onboarding across the firm",
         "- Visit: https://www.sidley.com",
         "",
-        "Computer Science & Math Tutor",
-        "Freelance · Remote",
-        "August 2023 – Present",
-        "- Tutored CS, discrete math, and Java/OOP",
-        "- Created personalized lesson plans",
+        "Logistics SoftwareOps Engineer",
+        "KNAPP North America · Elmhurst, IL",
+        "July 2025 – Present",
+        "As a Software Operations Engineer, I use my software engineering & ITOps experience to ensure that the fast-paced distribution facility is always running at full capacity, carrying out essential maintenance on the facilities software, bug fixing and making sure that the software to control all the systems within the facility are running correctly.",
       ]
+
 
       setHistory((prev) => [...prev, `> ${cmd}`])
       setCommandHistory((prev) => [...prev, cmd])

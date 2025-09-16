@@ -17,7 +17,7 @@ export default function Hero() {
           Ethan Cala
         </h1>
         <p className="text-lg text-muted-foreground mb-6">
-          Computer Scientist · Software Engineer · IT Professional
+          DevOps Engineer · Software Engineer · IT Operations
         </p>
 
         <div className="relative w-40 h-40 mx-auto mb-6 rounded-full border-4 border-primary shadow-md overflow-hidden">
