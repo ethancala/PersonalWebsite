@@ -17,13 +17,13 @@ export default function Hero() {
           Ethan Cala
         </h1>
         <p className="text-lg text-muted-foreground mb-6">
-          DevOps Engineer · Software Engineer · IT Operations
+          Engineering
         </p>
 
         <div className="relative w-40 h-40 mx-auto mb-6 rounded-full border-4 border-primary shadow-md overflow-hidden">
           <Image
             src="/assets/me.png"
-            alt="Ethan Cala"
+            alt="Ethan Cala"  
             layout="fill"
             objectFit="cover"
             priority
@@ -31,8 +31,7 @@ export default function Hero() {
         </div>
 
         <p className="text-base text-muted-foreground mb-8 leading-relaxed">
-          Passionate about building scalable, elegant solutions through software and systems design.
-          I specialize in full-stack web development, IT automation, and tech operations in enterprise environments.
+          DevOps and Automation Engineer in the Logistics and Robotics space.
         </p>
 
         <a

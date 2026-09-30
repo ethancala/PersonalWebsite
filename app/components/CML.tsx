@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 const COMMANDS: Record<string, string> = {
   help: "Available commands: about, experience, projects, skills, resume, clear, gui",
   about:
-    "I'm Ethan Cala — a software & ops engineer focused on automation and telemetry. I am passionate about building scalable, elegant solutions through software and systems design. I specialize in full-stack web development, IT automation, and tech operations in enterprise environments. I currently work at KNAPP in DevOps!",
+    "I'm Ethan Cala — an Engineer with a focus in DevOps and Automation specalizing in Logistics and Robotics systems! I work at KNAPP as a Logistics Software Ops Engineer II.",
 }
 
 export default function CML() {
@@ -57,16 +57,17 @@ export default function CML() {
 
     if (cmd === "experience") {
       const experienceLines = [
-        "Web Applications Developer (Frontend)",
-        "BCAMP · Chicago, IL",
-        "June 2024 – August 2024",
-        "- Developed a responsive UI using React, TypeScript, Tailwind, deployed on Vercel",
-        "- Integrated WalletAPI supporting 400+ wallets",
-        "- Rendered data from a FastAPI backend to optimize UX",
-        "- Wrote internal docs for dev onboarding and reuse",
-        "- Deployed builds via Vercel's CI/CD",
-        "- Visit: https://bcamp.xyz",
+         "Logistics Software Ops Engineer II",
+        "KNAPP North America · Elmhurst, IL",
+        "July 2025 – Present",
+        " As Engineer II, I provide advanced automation and software support, and support other engineers",
+        "- DevOps & Deployment: Managing Git-based deployments for new features and bug fixes. Azure DevOps and GitLab. I handle the deployments and testing  ",
+        "- Database Management & Automation: Writing SQL queries on Oracle DB to aggregate data, resolve issues, and automate workflows. Monitor tablespaces, Sessions, and optimization. Building Python2, Python3 and Bash scripts to automate workaround solutions, monitor issues and performance. ",
+        "- System Monitoring & Performance: Overseeing live servers and databases to maintain optimal performance and uptime. SQL execution planning, deadlocks, configurations, and overall server & DB peformance.",
+        "- Debugging & Issue Resolution: Investigating bugs, parsing logs and traces, stepping through code logic, and writing or suggesting fixes. Working with Developers to test and deploy new code on live system. Java, C++, Python, Assembly, PL/SQL",
+        "Visit: https://www.knapp.com/",
         "",
+
         "IT Operations Engineer Intern",
         "Sidley Austin LLP · Chicago, IL",
         "February 2024 – Present",
@@ -77,10 +78,17 @@ export default function CML() {
         "- Supported incidents and onboarding across the firm",
         "- Visit: https://www.sidley.com",
         "",
-        "Logistics SoftwareOps Engineer",
-        "KNAPP North America · Elmhurst, IL",
-        "July 2025 – Present",
-        "As a Software Operations Engineer, I use my software engineering & ITOps experience to ensure that the fast-paced distribution facility is always running at full capacity, carrying out essential maintenance on the facilities software, bug fixing and making sure that the software to control all the systems within the facility are running correctly.",
+
+        "Web Applications Developer (Frontend)",
+        "BCAMP · Chicago, IL",
+        "June 2024 – August 2024",
+        "- Developed a responsive UI using React, TypeScript, Tailwind, deployed on Vercel",
+        "- Integrated WalletAPI supporting 400+ wallets",
+        "- Rendered data from a FastAPI backend to optimize UX",
+        "- Wrote internal docs for dev onboarding and reuse",
+        "- Deployed builds via Vercel's CI/CD",
+        "- Visit: https://bcamp.xyz",
+        "",
       ]
 
 

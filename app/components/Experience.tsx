@@ -18,6 +18,20 @@ const experiences = [
       "Authored internal documentation to support component reusability, onboarding, and long-term maintenance.",
       "Deployed production builds using Vercel’s cloud-based CI/CD platform, ensuring fast iteration and reliable uptime."
     ]
+  },{
+    role: "Logistics Software Ops Engineer II",
+    company: "KNAPP North America",
+    location: "Elmhurst, IL",
+    date: "July 2025 – Present",
+    website: "https://www.knapp.com/",
+responsibilities: [
+      "As Engineer II, I provide advanced automation and robitics software support, and support other engineers",
+      "DevOps and Automation Engineering in the Logistics and Robotics space.",
+      "DevOps & Deployment: Managing Git-based deployments for new features and bug fixes. Azure DevOps and GitLab. I handle the deployments and testing  ",
+      "atabase Management & Automation: Writing SQL queries on Oracle DB to aggregate data, resolve issues, and automate workflows. Monitor tablespaces, Sessions, SQL execution plans and optimization. Building Python2, Python3 and Bash scripts to automate workaround solutions, monitor issues and performance. ",
+      "System Monitoring & Performance: Overseeing live servers and databases to maintain optimal performance and uptime. SQL execution planning, deadlocks,configurations, and overall server & DB peformance.",
+      "Debugging & Issue Resolution: Investigating bugs, parsing logs and traces, stepping through code logic, and writing or suggesting fixes. Working with Developers to test and deploy new code on live system. Java, C++, Python, Assembly, PL/SQL"
+    ]
   },
   {
     role: "IT Operations Engineer Intern",
@@ -34,17 +48,8 @@ const experiences = [
       "Assisted with new hire onboarding by ensuring seamless tech integration.",
       "Gained hands-on experience at the intersection of IT operations, software engineering, and observability."
     ]
-  },
-    {
-    role: "Logistics SoftwareOps Engineer",
-    company: "KNAPP North America",
-    location: "Elmhurst, IL",
-    date: "July 2025 – Present",
-    website: "https://www.knapp.com/",
-    responsibilities: [
-      "As a Software Operations Engineer, I use my software engineering & ITOps experience to ensure that the fast-paced distribution facility is always running at full capacity, carrying out essential maintenance on the facilities software, bug fixing and making sure that the software to control all the systems within the facility are running correctly."
-    ]
   }
+    
 ];
 
 
